@@ -12,7 +12,7 @@ const amountOneEl = document.getElementById("amount-one");
 const currencyTwoEl = document.getElementById("currency-two");
 const amountTwoEl = document.getElementById("amount-two");
 const rateEl = document.getElementById("rate");
-const swapBtn = document.getElementById("swap");
+const swapBtn = document.getElementById("swap-convert");
 
 // Objetos
 const exchangeRateObj = {
@@ -38,8 +38,7 @@ function calculate() {
     exchangeRate = data.rates[selectedCurrencyTwo];
     rateEl.innerText = `1 ${selectedCurrencyOne} = ${exchangeRate} ${selectedCurrencyTwo}`;
     amountTwoEl.value = (amountOneEl.value * exchangeRate).toFixed(2);
-    Swal.fire("Eleccion exitosa");
-    })
+  })
   .catch((error) => {
     console.log(error);
   });
@@ -50,11 +49,13 @@ currencyOneEl.addEventListener("change", calculate);
 amountOneEl.addEventListener("input", calculate);
 currencyTwoEl.addEventListener("change", calculate);
 amountTwoEl.addEventListener("input", calculate);
+
 swapBtn.addEventListener("click", () => {
   const temp = currencyOneEl.value;
   currencyOneEl.value = currencyTwoEl.value;
   currencyTwoEl.value = temp;
   calculate();
+  swal("Swap Exitoso!");
 });
 
 calculate();

@@ -52,7 +52,7 @@
 	margin-right: 0;
   }
   
-  .swap-container {
+  .swap {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -62,7 +62,7 @@
 	max-width: 500px;
   }
   
-  #swap {
+  #swap-convert {
 	font-size: 1.5rem;
 	background-color: #d4af37;
 	border: none;
@@ -72,7 +72,18 @@
 	padding: 0.5rem;
 	border-radius: 5px;
 	transition: background-color 0.3s ease-in-out;
+	font-size: 24px;
+	background-color: #bbb814;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
   }
+  button#swap-convert:hover {
+	background-color: #e6e6e6;
+	cursor: pointer;
+  }
+  
+  
   
   #swap:hover {
 	background-color: #f5f5f5;

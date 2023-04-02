@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversor de Moneda</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
     <h1>Conversor de Moneda</h1>
     <div class="converter">
       <div class="input-container">
-        <input type="number" id="amount-one" value="1">
+        <input type="number" id="amount-one" value="1" />
         <select id="currency-one">
           <option value="USD">USD</option>
-		  <option value="ARS">ARS</option>
+          <option value="ARS">ARS</option>
           <option value="EUR">EUR</option>
           <option value="GBP">GBP</option>
           <option value="JPY">JPY</option>
@@ -26,14 +27,14 @@
           <option value="SGD">SGD</option>
         </select>
       </div>
-      <div class="swap-container">
-        <button id="swap">&#8646;</button>
+      <div class="swap">
+        <button id="swap-convert"><span>&#8596;</span></button>
       </div>
       <div class="input-container">
-        <input type="number" id="amount-two" disabled>
+        <input type="number" id="amount-two" disabled />
         <select id="currency-two">
           <option value="EUR">EUR</option>
-		  <option value="ARS">ARS</option>
+          <option value="ARS">ARS</option>
           <option value="USD">USD</option>
           <option value="GBP">GBP</option>
           <option value="JPY">JPY</option>
@@ -50,7 +51,6 @@
       <p id="rate"></p>
     </div>
     <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
+    
   </body>
 </html>
