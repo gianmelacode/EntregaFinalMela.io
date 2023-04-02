@@ -6,7 +6,7 @@ let selectedCurrencyOne = "USD";
 let selectedCurrencyTwo = "EUR";
 let exchangeRate;
 
-// DOM Elements
+// Elementos del DOM
 const currencyOneEl = document.getElementById("currency-one");
 const amountOneEl = document.getElementById("amount-one");
 const currencyTwoEl = document.getElementById("currency-two");
@@ -14,7 +14,7 @@ const amountTwoEl = document.getElementById("amount-two");
 const rateEl = document.getElementById("rate");
 const swapBtn = document.getElementById("swap");
 
-// Objects
+// Objetos
 const exchangeRateObj = {
   base: "",
   date: "",
@@ -27,7 +27,7 @@ localStorage.setItem("currencies", JSON.stringify(currencies));
 // JSON
 const exchangeRateJSON = { "base": "", "date": "", "rates": {} };
 
-// Fetch Exchange Rates and Update the DOM
+// Fetch, cambios, Rates and Update de DOM
 function calculate() {
   selectedCurrencyOne = currencyOneEl.value;
   selectedCurrencyTwo = currencyTwoEl.value;
