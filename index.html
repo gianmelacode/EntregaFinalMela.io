@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moneda</title>
+    <link rel="stylesheet" href="./style/style.css">
+  </head>
+  <body>
+    <h1>Conversor de Moneda</h1>
+    <div class="converter">
+      <div class="input-container">
+        <input type="number" id="amount-one" value="1">
+        <select id="currency-one">
+          <option value="USD">USD</option>
+		  <option value="ARS">ARS</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="JPY">JPY</option>
+          <option value="CAD">CAD</option>
+          <option value="AUD">AUD</option>
+          <option value="CHF">CHF</option>
+          <option value="HKD">HKD</option>
+          <option value="NZD">NZD</option>
+          <option value="SGD">SGD</option>
+        </select>
+      </div>
+      <div class="swap-container">
+        <button id="swap">&#8646;</button>
+      </div>
+      <div class="input-container">
+        <input type="number" id="amount-two" disabled>
+        <select id="currency-two">
+          <option value="EUR">EUR</option>
+		  <option value="ARS">ARS</option>
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+          <option value="JPY">JPY</option>
+          <option value="CAD">CAD</option>
+          <option value="AUD">AUD</option>
+          <option value="CHF">CHF</option>
+          <option value="HKD">HKD</option>
+          <option value="NZD">NZD</option>
+          <option value="SGD">SGD</option>
+        </select>
+      </div>
+    </div>
+    <div class="rate-container">
+      <p id="rate"></p>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
