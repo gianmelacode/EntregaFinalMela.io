@@ -27,7 +27,7 @@ localStorage.setItem("currencies", JSON.stringify(currencies));
 // JSON
 const exchangeRateJSON = { "base": "", "date": "", "rates": {} };
 
-// Fetch, cambios, Rates and Update de DOM
+// Fetch, cambios, Rates y Update de DOM
 function calculate() {
   selectedCurrencyOne = currencyOneEl.value;
   selectedCurrencyTwo = currencyTwoEl.value;
@@ -38,13 +38,14 @@ function calculate() {
     exchangeRate = data.rates[selectedCurrencyTwo];
     rateEl.innerText = `1 ${selectedCurrencyOne} = ${exchangeRate} ${selectedCurrencyTwo}`;
     amountTwoEl.value = (amountOneEl.value * exchangeRate).toFixed(2);
-  })
+    Swal.fire("Eleccion exitosa");
+    })
   .catch((error) => {
     console.log(error);
   });
 }
 
-// Event Listeners
+// Eventos
 currencyOneEl.addEventListener("change", calculate);
 amountOneEl.addEventListener("input", calculate);
 currencyTwoEl.addEventListener("change", calculate);
